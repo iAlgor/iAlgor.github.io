@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;1,700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.element::-webkit-scrollbar { width: 0 !important }
+
+body {
+    background: #151D21;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover {
+    color: #7d94fa;
+}
+
+
+header .logo a {
+/*	background-image: url("images/Si1kn.png"); */
+	background-size: 90px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	text-indent: -999999px;
+	position: relative;
+    top: -15px;
+}
+
+
+li:first-child {
+    float: left; 
+}
+
+li {
+    display: inline-block;
+    padding-right: 7%;
+    margin: 10px 0 0 0;
+    font-size: 36px;
+}
+
+.topnav {
+    list-style: none;
+    font-family: 'Comic Neue', cursive;
+    color: aliceblue;
+    margin: 50px 0 0 0;
+    text-align: center;
+}
+
+section header {
+    margin-top: 0px;
+    font-family: 'Comic Neue', cursive;
+    font-size: 62px;
+    margin-bottom: 20px;
+}
+
+.home {
+    margin-top: 220px;
+}
+
+section {
+    text-align: center;
+    padding: 8%;
+}
+
+section nav {
+    font-family: 'Comic Neue', cursive;
+    font-size: 36px;
+    line-height: 55px;
+    text-align: left;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .mybutton {
+    font-family: 'Roboto';
+    font-size: 24px;
+    color: #151D21;
+    background: #ff7a7a;
+    display: inline-flex;
+    padding: 6px;
+    margin-top: 30px;
+    margin-right: 5%;
+    margin-left: 5%;
+    border: none;
+    border-radius: 5px;
+}
+
+.features {
+	color: gray;
+	padding: 20px;
+	display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -90px;
+}
+
+
+figure figcaption a:hover {
+    color: gray;
+}
+
+
+section .mybutton:hover {
+    background: white;
+    font-size: 26px;
+    margin-top: 29px;
+}
+
+.par {
+    margin-top: 100px;
+    height: 100px;
+}
+
+footer {
+    font-family: 'Comic Neue', cursive;
+    text-align: center;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0pt;
+}

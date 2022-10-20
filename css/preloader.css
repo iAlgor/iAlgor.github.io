@@ -1,0 +1,106 @@
+#preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    background: linear-gradient(190deg, #3c61a4, #20325e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+#loader object {
+    width: 125px;
+    opacity: 0.4;
+}
+
+#preloader #spinny-thing {
+    position: absolute;
+    animation-name: spinny-thing;
+    -webkit-animation-name: spinny-thing;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    width: 150px;
+    height: 150px;
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    border: 10px solid #f1f1f15c;
+    border-top: 10px solid #8a8a8aa6;
+}
+
+@keyframes spinny-thing {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+body.page-loaded #loader object {
+    animation-name: loaded;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+@keyframes loaded {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1.4) translateY(-50%);
+        -webkit-transform: scale(1.4) translateY(-50%);
+        -moz-transform: scale(1.4) translateY(-50%);
+        -ms-transform: scale(1.4) translateY(-50%);
+        -o-transform: scale(1.4) translateY(-50%);
+}
+}
+
+body.page-loaded #loader #spinny-thing {
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    opacity: 0;
+}
+
+body.page-loaded #preloader {
+    animation: delete-preloader;
+    -webkit-animation: delete-preloader;
+    animation-delay: 1.2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes delete-preloader {
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}

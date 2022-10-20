@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("./css/preloader.css");
+@import url("./css/navbar.css");
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+    background-color: var(--main);
+}
+html { scroll-behavior: smooth; }
+h1, h2, h3, h4, h5, h6, a, div, span, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main: rgba(44,44,44,1);
+    --secondary: rgba(230, 230, 230, 1);
+}
+
+section#fullviewport[aria-label="Main page"] {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./assets/background.svg");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+section#fullviewport .left {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+section#fullviewport[aria-label="Main page"] .left h4, 
+section#fullviewport[aria-label="Main page"] .left h1 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 4.5rem;
+}
+
+section#fullviewport[aria-label="Main page"] .left h4 { font-weight: 500; }
+section#fullviewport[aria-label="Main page"] .left h1 { font-weight: 700; }
+section#fullviewport[aria-label="Main page"] .left h5 { 
+    font-weight: 400;
+    color: #8E8E8E;
+    font-size: 2rem;
+}
+
+section#fullviewport .right {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+section#fullviewport .right .button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+section#fullviewport .right .button-container a {
+    border-radius: 100rem;
+    -webkit-border-radius: 100rem;
+    -moz-border-radius: 100rem;
+    -ms-border-radius: 100rem;
+    -o-border-radius: 100rem;
+    padding: 10px;
+    width: 20rem;
+    margin-right: 15px;
+    margin-left: 15px;
+    border: none;
+    outline: none;
+    background: #2C2C2C;
+    color: white;
+    font-size: 1.75rem;
+    box-shadow: 0px 0px 15px #000000;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+section#fullviewport .right .button-container a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+section#fullviewport .right h1 {
+    font-size: 6rem;
+}
+
+@media only screen and (max-width: 1610px) {
+    
+}
